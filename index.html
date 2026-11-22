@@ -1,0 +1,1285 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>兔崽baby｜tuzaibaby每日大赛官方网站 - 原创视频社区与每日创作挑战</title>
+<meta name="description" content="兔崽baby（tuzaibaby）官方网站，tuzaibaby每日大赛官方发布平台，汇聚原创创作者、每日挑战、精品内容与真实社区，深耕垂直领域的内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231b1f26'/%3E%3Ccircle cx='24' cy='22' r='7' fill='%23f7c948'/%3E%3Ccircle cx='42' cy='22' r='7' fill='%23f7c948'/%3E%3Cpath d='M32 30c9 0 16 7 16 15s-7 13-16 13-16-5-16-13 7-15 16-15z' fill='%23fff'/%3E%3Ccircle cx='26' cy='42' r='2.4' fill='%231b1f26'/%3E%3Ccircle cx='38' cy='42' r='2.4' fill='%231b1f26'/%3E%3Cpath d='M28 49q4 3 8 0' stroke='%231b1f26' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --tz-ink:#1b1f26;
+  --tz-ink-soft:#2b313c;
+  --tz-gold:#f7c948;
+  --tz-gold-deep:#e0a92a;
+  --tz-paper:#f3f1ec;
+  --tz-card:#ffffff;
+  --tz-line:#e3dfd4;
+  --tz-muted:#6c7280;
+  --tz-cyan:#37c2b8;
+  --tz-red:#e4572e;
+  --tz-radius:18px;
+  --tz-shadow:0 10px 30px rgba(27,31,38,.08);
+  --tz-head-h:118px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--tz-head-h);}
+body{
+  margin:0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--tz-paper);color:var(--tz-ink);line-height:1.72;font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:800;letter-spacing:.01em;}
+p{margin:0 0 1em;}
+ul,ol{margin:0;padding:0;list-style:none;}
+.tz-wrap{width:min(1180px,92vw);margin:0 auto;}
+.tz-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+
+/* ---------- sticky head ---------- */
+.tz-sticky{position:sticky;top:0;z-index:60;}
+.tz-announce{
+  background:linear-gradient(90deg,var(--tz-ink) 0%,#2c3442 55%,#3a2f14 100%);
+  color:#f6f1e2;font-size:13.5px;border-bottom:1px solid rgba(247,201,72,.28);
+}
+.tz-announce .tz-wrap{display:flex;gap:14px;align-items:center;padding:9px 0;flex-wrap:wrap;}
+.tz-announce-tag{
+  background:var(--tz-gold);color:var(--tz-ink);font-weight:800;font-size:12px;
+  padding:2px 9px;border-radius:999px;letter-spacing:.05em;flex:0 0 auto;
+}
+.tz-announce-list{display:flex;gap:22px;flex-wrap:wrap;flex:1 1 auto;min-width:0;}
+.tz-announce-list li{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;}
+.tz-announce-list li b{color:var(--tz-gold);font-weight:700;}
+.tz-announce-time{font-size:12px;color:#c9c2ad;flex:0 0 auto;}
+
+.tz-header{background:rgba(243,241,236,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--tz-line);}
+.tz-header-in{display:flex;align-items:center;gap:22px;padding:14px 0;}
+.tz-logo{display:flex;align-items:center;gap:11px;flex:0 0 auto;}
+.tz-logo-mark{
+  width:44px;height:44px;border-radius:13px;background:var(--tz-ink);position:relative;flex:0 0 auto;
+  display:grid;place-items:center;
+}
+.tz-logo-mark::before,.tz-logo-mark::after{
+  content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--tz-gold);top:6px;
+}
+.tz-logo-mark::before{left:7px;}
+.tz-logo-mark::after{right:7px;}
+.tz-logo-mark span{width:22px;height:18px;border-radius:50% 50% 46% 46%;background:#fff;display:block;position:relative;top:5px;}
+.tz-logo-mark span::before,.tz-logo-mark span::after{
+  content:"";position:absolute;width:3.4px;height:3.4px;background:var(--tz-ink);border-radius:50%;top:6px;
+}
+.tz-logo-mark span::before{left:5px;}
+.tz-logo-mark span::after{right:5px;}
+.tz-logo-text strong{display:block;font-size:18px;letter-spacing:.02em;}
+.tz-logo-text small{display:block;font-size:11.5px;color:var(--tz-muted);letter-spacing:.18em;}
+.tz-nav{margin-left:auto;display:flex;gap:4px;align-items:center;flex-wrap:wrap;}
+.tz-nav a{
+  padding:8px 12px;border-radius:10px;font-size:14.5px;font-weight:600;color:var(--tz-ink-soft);
+  transition:background .2s,color .2s;
+}
+.tz-nav a:hover,.tz-nav a.tz-nav-on{background:var(--tz-ink);color:var(--tz-gold);}
+.tz-search{position:relative;flex:0 1 232px;min-width:150px;}
+.tz-search input{
+  width:100%;padding:9px 34px 9px 13px;border-radius:11px;border:1px solid var(--tz-line);
+  background:#fff;font-size:14px;color:var(--tz-ink);outline:none;transition:border-color .2s,box-shadow .2s;
+}
+.tz-search input:focus{border-color:var(--tz-gold-deep);box-shadow:0 0 0 3px rgba(247,201,72,.3);}
+.tz-search button{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);border:0;background:transparent;
+  width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:var(--tz-muted);
+}
+.tz-search button:hover{background:var(--tz-paper);color:var(--tz-ink);}
+.tz-search-hint{
+  position:absolute;left:0;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--tz-line);
+  border-radius:12px;box-shadow:var(--tz-shadow);padding:8px;font-size:13px;display:none;z-index:40;
+}
+.tz-search-hint.tz-open{display:block;}
+.tz-search-hint p{margin:0;padding:7px 9px;border-radius:8px;color:var(--tz-ink-soft);}
+.tz-search-hint p b{color:var(--tz-red);}
+.tz-search-hint p:hover{background:var(--tz-paper);cursor:pointer;}
+.tz-burger{display:none;margin-left:auto;width:42px;height:42px;border-radius:11px;border:1px solid var(--tz-line);background:#fff;}
+.tz-burger span{display:block;width:18px;height:2px;background:var(--tz-ink);margin:4px auto;border-radius:2px;transition:.25s;}
+.tz-burger.tz-burger-x span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.tz-burger.tz-burger-x span:nth-child(2){opacity:0;}
+.tz-burger.tz-burger-x span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+
+/* ---------- hero ---------- */
+.tz-hero{padding:44px 0 24px;}
+.tz-hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:40px;align-items:center;}
+.tz-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:.14em;
+  color:var(--tz-gold-deep);background:#fff;border:1px solid var(--tz-line);border-radius:999px;padding:5px 13px;
+  text-transform:uppercase;
+}
+.tz-hero h1{font-size:clamp(34px,4.6vw,58px);margin:16px 0 8px;letter-spacing:-.01em;}
+.tz-hero h1 em{font-style:normal;color:var(--tz-red);}
+.tz-hero-sub{font-size:17.5px;color:var(--tz-ink-soft);font-weight:600;max-width:38ch;}
+.tz-hero-intro{font-size:15px;color:var(--tz-muted);max-width:52ch;margin-top:12px;}
+.tz-hero-stats{display:flex;gap:14px;margin:22px 0 24px;flex-wrap:wrap;}
+.tz-stat{
+  background:#fff;border:1px solid var(--tz-line);border-radius:14px;padding:11px 16px;min-width:112px;
+  box-shadow:0 3px 0 rgba(27,31,38,.04);
+}
+.tz-stat b{display:block;font-size:22px;color:var(--tz-ink);letter-spacing:-.02em;}
+.tz-stat b i{font-style:normal;font-size:13px;color:var(--tz-gold-deep);margin-left:2px;}
+.tz-stat span{font-size:12.5px;color:var(--tz-muted);}
+.tz-hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.tz-btn{
+  border:0;border-radius:12px;padding:12px 22px;font-size:15px;font-weight:800;display:inline-flex;
+  align-items:center;gap:8px;transition:transform .18s,box-shadow .18s,background .18s;
+}
+.tz-btn-primary{background:var(--tz-ink);color:var(--tz-gold);}
+.tz-btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(27,31,38,.24);}
+.tz-btn-gold{background:var(--tz-gold);color:var(--tz-ink);}
+.tz-btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(224,169,42,.34);}
+.tz-btn-ghost{background:#fff;color:var(--tz-ink);border:1px solid var(--tz-line);}
+.tz-btn-ghost:hover{border-color:var(--tz-ink);}
+.tz-hero-visual{position:relative;}
+.tz-hero-visual .tz-hero-img{border-radius:22px;overflow:hidden;box-shadow:var(--tz-shadow);border:1px solid var(--tz-line);background:#fff;}
+.tz-hero-badge{
+  position:absolute;left:-14px;bottom:22px;background:#fff;border-radius:14px;padding:10px 15px;
+  box-shadow:var(--tz-shadow);border:1px solid var(--tz-line);font-size:13px;font-weight:700;
+}
+.tz-hero-badge span{display:block;font-size:11.5px;color:var(--tz-muted);font-weight:600;}
+.tz-hero-badge b{color:var(--tz-red);font-size:18px;letter-spacing:-.02em;}
+
+/* ---------- section shell ---------- */
+.tz-sec{padding:48px 0;}
+.tz-sec-alt{background:#fff;border-top:1px solid var(--tz-line);border-bottom:1px solid var(--tz-line);}
+.tz-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:26px;flex-wrap:wrap;}
+.tz-sec-head h2{font-size:clamp(24px,3vw,32px);}
+.tz-sec-head h2 span{color:var(--tz-red);font-size:.62em;vertical-align:middle;margin-left:8px;font-weight:800;letter-spacing:.1em;}
+.tz-sec-head p{margin:6px 0 0;font-size:14.5px;color:var(--tz-muted);max-width:62ch;}
+.tz-sec-link{font-size:14px;font-weight:800;color:var(--tz-ink);border-bottom:2px solid var(--tz-gold);padding-bottom:2px;}
+
+/* ---------- featured ---------- */
+.tz-featured{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:26px;}
+.tz-feature-main{background:#fff;border:1px solid var(--tz-line);border-radius:20px;overflow:hidden;box-shadow:var(--tz-shadow);}
+.tz-feature-main figure{margin:0;position:relative;}
+.tz-feature-main img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.tz-play{
+  position:absolute;right:14px;bottom:14px;background:rgba(27,31,38,.82);color:#fff;border-radius:999px;
+  padding:7px 14px;font-size:12.5px;font-weight:700;display:flex;align-items:center;gap:7px;backdrop-filter:blur(4px);
+}
+.tz-play::before{content:"";width:0;height:0;border-left:8px solid var(--tz-gold);border-top:5px solid transparent;border-bottom:5px solid transparent;}
+.tz-feature-body{padding:20px 22px 22px;}
+.tz-tagrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+.tz-tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--tz-paper);color:var(--tz-ink-soft);border:1px solid var(--tz-line);}
+.tz-tag-hot{background:#fdece8;color:var(--tz-red);border-color:#f6cfc6;}
+.tz-feature-body h3{font-size:22px;margin-bottom:8px;}
+.tz-feature-body p{font-size:14.5px;color:var(--tz-muted);margin-bottom:14px;}
+.tz-meta{display:flex;gap:14px;font-size:12.8px;color:var(--tz-muted);flex-wrap:wrap;align-items:center;}
+.tz-meta b{color:var(--tz-ink);}
+.tz-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px;}
+.tz-act{
+  border:1px solid var(--tz-line);background:#fff;border-radius:9px;padding:6px 11px;font-size:12.8px;
+  font-weight:700;color:var(--tz-ink-soft);display:inline-flex;align-items:center;gap:6px;transition:.18s;
+}
+.tz-act:hover{border-color:var(--tz-ink);transform:translateY(-1px);}
+.tz-act.tz-act-on{background:#fdece8;border-color:#f6cfc6;color:var(--tz-red);}
+.tz-feature-side{display:grid;gap:14px;align-content:start;}
+.tz-mini{
+  display:grid;grid-template-columns:78px minmax(0,1fr);gap:13px;background:#fff;border:1px solid var(--tz-line);
+  border-radius:14px;padding:12px;transition:transform .18s,box-shadow .18s;
+}
+.tz-mini:hover{transform:translateY(-2px);box-shadow:var(--tz-shadow);}
+.tz-mini img{width:78px;height:60px;object-fit:cover;border-radius:9px;grid-row:span 2;}
+.tz-mini h4{font-size:15px;margin-bottom:4px;}
+.tz-mini span{font-size:12.3px;color:var(--tz-muted);}
+
+/* ---------- video list ---------- */
+.tz-vlist{display:grid;gap:14px;}
+.tz-vitem{
+  background:#fff;border:1px solid var(--tz-line);border-radius:16px;padding:16px 18px;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:start;
+  transition:border-color .2s,box-shadow .2s;
+}
+.tz-vitem:hover{border-color:#cfc8b6;box-shadow:var(--tz-shadow);}
+.tz-vitem h4{font-size:16.5px;margin-bottom:5px;}
+.tz-vitem p{font-size:13.8px;color:var(--tz-muted);margin:0 0 10px;}
+.tz-vitem-side{display:flex;flex-direction:column;gap:8px;align-items:flex-end;min-width:112px;}
+.tz-vdata{font-size:12.3px;color:var(--tz-muted);text-align:right;line-height:1.6;}
+.tz-vdata b{color:var(--tz-ink);font-size:13.5px;}
+.tz-thumb{border-radius:12px;overflow:hidden;border:1px solid var(--tz-line);margin-bottom:12px;}
+.tz-thumb img{width:100%;aspect-ratio:16/7;object-fit:cover;}
+
+/* ---------- topic / special ---------- */
+.tz-topics{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:18px;}
+.tz-topic{background:#fff;border:1px solid var(--tz-line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px;}
+.tz-topic-head{display:flex;justify-content:space-between;align-items:center;gap:10px;}
+.tz-topic h3{font-size:18px;}
+.tz-status{font-size:11.5px;font-weight:800;padding:3px 9px;border-radius:999px;background:#e9f7f5;color:#1c8f86;white-space:nowrap;}
+.tz-status-end{background:var(--tz-paper);color:var(--tz-muted);}
+.tz-topic p{font-size:13.8px;color:var(--tz-muted);margin:0;}
+.tz-topic ol{display:grid;gap:7px;margin-top:4px;}
+.tz-topic ol li{font-size:13.6px;padding-left:20px;position:relative;color:var(--tz-ink-soft);}
+.tz-topic ol li::before{content:"›";position:absolute;left:6px;color:var(--tz-gold-deep);font-weight:800;}
+
+/* ---------- creators ---------- */
+.tz-authors{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,255px),1fr));gap:18px;}
+.tz-author{background:#fff;border:1px solid var(--tz-line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:11px;}
+.tz-author-top{display:flex;gap:12px;align-items:center;}
+.tz-ava{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-weight:800;font-size:19px;color:#fff;flex:0 0 auto;}
+.tz-author-top h3{font-size:16.5px;}
+.tz-author-top h3 small{display:block;font-size:12px;color:var(--tz-muted);font-weight:600;}
+.tz-author p{font-size:13.5px;color:var(--tz-muted);margin:0;}
+.tz-author-data{display:flex;gap:16px;font-size:12.5px;color:var(--tz-muted);border-top:1px dashed var(--tz-line);padding-top:11px;}
+.tz-author-data b{display:block;color:var(--tz-ink);font-size:14.5px;}
+
+/* ---------- comments ---------- */
+.tz-comments{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:22px;align-items:start;}
+.tz-clist{display:grid;gap:12px;}
+.tz-comment{background:#fff;border:1px solid var(--tz-line);border-radius:14px;padding:14px 16px;}
+.tz-comment-top{display:flex;align-items:center;gap:9px;margin-bottom:7px;}
+.tz-cava{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:12.5px;font-weight:800;color:#fff;flex:0 0 auto;}
+.tz-comment-top strong{font-size:13.8px;}
+.tz-comment-top em{font-style:normal;font-size:11.5px;color:var(--tz-muted);margin-left:auto;}
+.tz-comment p{font-size:13.8px;margin:0;color:var(--tz-ink-soft);}
+.tz-rate{background:var(--tz-ink);color:#fff;border-radius:18px;padding:24px;position:sticky;top:calc(var(--tz-head-h) + 16px);}
+.tz-rate b{font-size:46px;color:var(--tz-gold);letter-spacing:-.03em;line-height:1;}
+.tz-rate span{display:block;font-size:13px;color:#c6c9d0;margin-top:6px;}
+.tz-rate ul{margin-top:16px;display:grid;gap:9px;}
+.tz-rate li{display:flex;justify-content:space-between;font-size:13px;color:#dfe1e6;gap:12px;}
+.tz-rate li i{font-style:normal;color:var(--tz-gold);font-weight:700;}
+
+/* ---------- insights ---------- */
+.tz-insights{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;}
+.tz-insight{background:#fff;border:1px solid var(--tz-line);border-radius:16px;padding:18px;border-left:4px solid var(--tz-cyan);}
+.tz-insight h3{font-size:16px;margin-bottom:7px;}
+.tz-insight p{font-size:13.6px;color:var(--tz-muted);margin:0;}
+.tz-insight:nth-child(2){border-left-color:var(--tz-gold-deep);}
+.tz-insight:nth-child(3){border-left-color:var(--tz-red);}
+
+/* ---------- faq ---------- */
+.tz-faq{display:grid;gap:10px;max-width:900px;}
+.tz-faq details{background:#fff;border:1px solid var(--tz-line);border-radius:12px;padding:13px 17px;}
+.tz-faq summary{font-weight:700;font-size:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;}
+.tz-faq summary::-webkit-details-marker{display:none;}
+.tz-faq summary::after{content:"+";font-size:20px;color:var(--tz-gold-deep);font-weight:800;line-height:1;}
+.tz-faq details[open] summary::after{content:"–";}
+.tz-faq details p{font-size:13.8px;color:var(--tz-muted);margin:10px 0 0;}
+
+/* ---------- partners / news ---------- */
+.tz-partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:14px;}
+.tz-partner{
+  background:#fff;border:1px solid var(--tz-line);border-radius:14px;padding:16px;text-align:center;
+  font-weight:800;font-size:14.5px;color:var(--tz-ink-soft);
+}
+.tz-partner small{display:block;font-weight:600;font-size:11.5px;color:var(--tz-muted);margin-top:2px;}
+.tz-news{display:grid;gap:12px;}
+.tz-news li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:baseline;background:#fff;border:1px solid var(--tz-line);border-radius:12px;padding:13px 16px;}
+.tz-news time{font-size:12.5px;font-weight:800;color:var(--tz-gold-deep);white-space:nowrap;}
+.tz-news p{font-size:13.8px;margin:0;color:var(--tz-ink-soft);}
+
+/* ---------- deepread ---------- */
+.tz-deep{max-width:920px;}
+.tz-deep h3{font-size:19px;margin:26px 0 10px;}
+.tz-deep h3:first-child{margin-top:0;}
+.tz-deep p{font-size:14.6px;color:var(--tz-ink-soft);}
+.tz-deep ul{margin:0 0 1em;display:grid;gap:8px;}
+.tz-deep ul li{font-size:14.4px;color:var(--tz-ink-soft);padding-left:20px;position:relative;}
+.tz-deep ul li::before{content:"";position:absolute;left:4px;top:.66em;width:7px;height:7px;border-radius:2px;background:var(--tz-gold);transform:rotate(45deg);}
+.tz-pull{
+  border-left:4px solid var(--tz-ink);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;
+  font-size:15px;font-weight:600;color:var(--tz-ink-soft);margin:18px 0;
+}
+
+/* ---------- footer ---------- */
+.tz-footer{background:var(--tz-ink);color:#c8cbd2;padding:44px 0 22px;margin-top:30px;}
+.tz-footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,.8fr));gap:28px;}
+.tz-footer h4{color:#fff;font-size:14.5px;margin-bottom:12px;letter-spacing:.03em;}
+.tz-footer p{font-size:13.2px;color:#a7abb5;line-height:1.8;}
+.tz-footer li{font-size:13.2px;margin-bottom:7px;color:#a7abb5;}
+.tz-footer li a:hover{color:var(--tz-gold);}
+.tz-footer-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px;}
+.tz-footer-brand strong{color:#fff;font-size:17px;}
+.tz-footer-bottom{border-top:1px solid #333a45;margin-top:28px;padding-top:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.4px;color:#8b909b;}
+
+/* ---------- toast / top ---------- */
+.tz-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,26px);background:var(--tz-ink);color:var(--tz-gold);
+  padding:11px 20px;border-radius:999px;font-size:13.6px;font-weight:700;box-shadow:0 14px 30px rgba(0,0,0,.28);
+  opacity:0;pointer-events:none;transition:.28s;z-index:120;
+}
+.tz-toast.tz-show{opacity:1;transform:translate(-50%,0);}
+.tz-top{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:14px;border:1px solid var(--tz-line);
+  background:#fff;color:var(--tz-ink);font-size:19px;display:grid;place-items:center;box-shadow:var(--tz-shadow);
+  opacity:0;pointer-events:none;transition:.25s;z-index:90;
+}
+.tz-top.tz-show{opacity:1;pointer-events:auto;}
+.tz-top:hover{background:var(--tz-gold);}
+
+/* modal */
+.tz-modal{position:fixed;inset:0;background:rgba(16,19,24,.58);display:none;place-items:center;padding:20px;z-index:130;backdrop-filter:blur(3px);}
+.tz-modal.tz-open{display:grid;}
+.tz-modal-box{background:#fff;border-radius:20px;max-width:520px;width:100%;padding:26px;position:relative;box-shadow:0 30px 60px rgba(0,0,0,.3);}
+.tz-modal-box h3{font-size:20px;margin-bottom:8px;}
+.tz-modal-box p{font-size:14px;color:var(--tz-muted);}
+.tz-modal-box .tz-field{margin-bottom:12px;}
+.tz-modal-box label{font-size:13px;font-weight:700;display:block;margin-bottom:5px;}
+.tz-modal-box input,.tz-modal-box textarea{
+  width:100%;border:1px solid var(--tz-line);border-radius:10px;padding:10px 12px;font-size:14px;
+  font-family:inherit;outline:none;transition:.18s;
+}
+.tz-modal-box input:focus,.tz-modal-box textarea:focus{border-color:var(--tz-gold-deep);box-shadow:0 0 0 3px rgba(247,201,72,.3);}
+.tz-modal-close{position:absolute;right:14px;top:12px;border:0;background:var(--tz-paper);width:30px;height:30px;border-radius:9px;font-size:16px;color:var(--tz-ink-soft);}
+
+@media(max-width:960px){
+  .tz-hero-grid{grid-template-columns:1fr;}
+  .tz-featured{grid-template-columns:1fr;}
+  .tz-comments{grid-template-columns:1fr;}
+  .tz-rate{position:static;}
+  .tz-footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:840px){
+  :root{--tz-head-h:108px;}
+  .tz-burger{display:block;}
+  .tz-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--tz-line);
+    padding:10px 4vw 16px;flex-direction:column;align-items:stretch;gap:2px;box-shadow:var(--tz-shadow);
+  }
+  .tz-nav.tz-nav-open{display:flex;}
+  .tz-nav a{padding:11px 12px;}
+  .tz-header-in{position:relative;flex-wrap:wrap;}
+  .tz-search{flex:1 1 100%;order:5;margin-top:10px;}
+}
+@media(max-width:620px){
+  .tz-vitem{grid-template-columns:1fr;}
+  .tz-vitem-side{align-items:flex-start;min-width:0;}
+  .tz-vdata{text-align:left;}
+  .tz-sec{padding:36px 0;}
+  .tz-footer-grid{grid-template-columns:1fr;}
+  .tz-announce-time{display:none;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="tz-sticky">
+  <div class="tz-announce" id="tz-announce">
+    <div class="tz-wrap">
+      <span class="tz-announce-tag">官方发布</span>
+      <ul class="tz-announce-list">
+        <li><b>新增</b>「第 48 期 tuzaibaby 每日大赛」命题：城市清晨第一帧，今日 21:00 截止上传</li>
+        <li><b>更新</b>创作者主页支持竖屏预览与多机位剪辑时间线</li>
+        <li><b>公告</b>官方精品内容合辑《厨房里的三百秒》第 2 季上线</li>
+      </ul>
+      <span class="tz-announce-time">2026 / 11 / 22</span>
+    </div>
+  </div>
+
+  <header class="tz-header">
+    <div class="tz-wrap tz-header-in">
+      <a class="tz-logo" href="#tz-home" aria-label="兔崽baby官方网站首页">
+        <span class="tz-logo-mark"><span></span></span>
+        <span class="tz-logo-text">
+          <strong>兔崽baby</strong>
+          <small>TUZAIBABY</small>
+        </span>
+      </a>
+      <nav class="tz-nav" id="tz-nav" aria-label="主导航">
+        <a href="#tz-daily" class="tz-nav-on">每日大赛</a>
+        <a href="#tz-videos">精品内容</a>
+        <a href="#tz-topics">专题企划</a>
+        <a href="#tz-authors">创作者</a>
+        <a href="#tz-voices">社区口碑</a>
+        <a href="#tz-about">品牌故事</a>
+        <a href="#tz-faq">帮助中心</a>
+      </nav>
+      <div class="tz-search">
+        <input type="search" id="tz-search-input" placeholder="搜索大赛命题 / 创作者" aria-label="站内搜索">
+        <button type="button" id="tz-search-btn" aria-label="提交搜索">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M20 20l-4.6-4.6"></path></svg>
+        </button>
+        <div class="tz-search-hint" id="tz-search-hint" role="status" aria-live="polite"></div>
+      </div>
+      <button class="tz-burger" id="tz-burger" aria-label="展开导航菜单" aria-expanded="false" aria-controls="tz-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<main>
+
+  <!-- S2 hero -->
+  <section class="tz-hero" id="tz-home">
+    <div class="tz-wrap tz-hero-grid">
+      <div>
+        <span class="tz-eyebrow">官方网站 · 视频品牌</span>
+        <h1>兔崽baby</h1>
+        <p class="tz-hero-sub">tuzaibaby 每日大赛 · 每天一个新命题，让原创影像被看见</p>
+        <p class="tz-hero-intro">兔崽baby 是一家持续运营的视频内容品牌，以「每日大赛」为核心机制，为创作者、企业与观众搭建高品质内容生态。我们相信真实、温暖、有力量的影像，能成为陪伴日常的一部分。</p>
+        <div class="tz-hero-stats">
+          <div class="tz-stat"><b>1,284<i>期</i></b><span>每日大赛累计周期</span></div>
+          <div class="tz-stat"><b>6,920<i>位</i></b><span>入驻认证创作者</span></div>
+          <div class="tz-stat"><b>98.6<i>%</i></b><span>参赛作品审核通过率</span></div>
+        </div>
+        <div class="tz-hero-actions">
+          <a class="tz-btn tz-btn-primary" href="#tz-daily">查看今日赛题</a>
+          <a class="tz-btn tz-btn-gold" href="#tz-authors">认识创作者</a>
+          <button class="tz-btn tz-btn-ghost" type="button" data-tz-modal="submit">我要投稿</button>
+        </div>
+      </div>
+      <div class="tz-hero-visual">
+        <div class="tz-hero-img">
+          <svg viewBox="0 0 800 620" role="img" aria-label="兔崽baby每日大赛官方主视觉：清晨厨房窗边取景框与创作者剪影" style="width:100%;aspect-ratio:16/12;display:block;background:#e9e4d6;">
+            <rect width="800" height="620" fill="#e9e4d6"/>
+            <rect x="58" y="52" width="684" height="516" rx="26" fill="#1b1f26"/>
+            <rect x="86" y="80" width="628" height="460" rx="16" fill="#2b313c"/>
+            <circle cx="612" cy="150" r="62" fill="#f7c948"/>
+            <path d="M86 402l168-118 128 96 132-140 200 162v138a16 16 0 0 1-16 16H102a16 16 0 0 1-16-16z" fill="#37c2b8" opacity=".55"/>
+            <path d="M86 458l134-88 116 84 152-120 232 178v28a16 16 0 0 1-16 16H102a16 16 0 0 1-16-16z" fill="#e4572e" opacity=".42"/>
+            <rect x="86" y="80" width="628" height="460" rx="16" fill="none" stroke="#f7c948" stroke-width="2" stroke-dasharray="12 10" opacity=".55"/>
+            <circle cx="398" cy="286" r="62" fill="#f3f1ec" opacity=".92"/>
+            <path d="M370 262c0-18 12-30 28-30s28 12 28 30" fill="#f7c948"/>
+            <circle cx="384" cy="282" r="4" fill="#1b1f26"/>
+            <circle cx="412" cy="282" r="4" fill="#1b1f26"/>
+            <path d="M388 300q10 8 20 0" stroke="#1b1f26" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <text x="86" y="536" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="26" font-weight="700" fill="#f3f1ec">每日大赛 · 第 48 期</text>
+            <text x="86" y="514" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" fill="#c9c2ad" letter-spacing="3">TUZAIBABY DAILY CHALLENGE</text>
+          </svg>
+        </div>
+        <div class="tz-hero-badge">
+          <b>+3,412</b>
+          <span>今日新增参赛作品</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点 -->
+  <section class="tz-sec" id="tz-daily">
+    <div class="tz-wrap">
+      <div class="tz-sec-head">
+        <div>
+          <h2>今日焦点<span>FOCUS</span></h2>
+          <p>兔崽baby 每日大赛以命题驱动创作，编辑组从海量投稿中挑选具备叙事完成度与画面风格的原创作品，作为当日的官方推荐。</p>
+        </div>
+        <a class="tz-sec-link" href="#tz-videos">浏览全部精品内容</a>
+      </div>
+
+      <div class="tz-featured">
+        <article class="tz-feature-main" data-tz-card>
+          <figure>
+            <svg viewBox="0 0 800 450" role="img" aria-label="每日大赛焦点作品封面：清晨六点的厨房窗台与一杯冒着热气的茶" style="width:100%;aspect-ratio:16/9;display:block;background:#f2e3cc;">
+              <rect width="800" height="450" fill="#f2e3cc"/>
+              <rect x="0" y="300" width="800" height="150" fill="#c8a274"/>
+              <rect x="90" y="70" width="250" height="190" rx="10" fill="#a9d6d1"/>
+              <path d="M90 70h250v190H90z" fill="none" stroke="#1b1f26" stroke-width="10"/>
+              <path d="M215 70v190M90 165h250" stroke="#1b1f26" stroke-width="8"/>
+              <circle cx="152" cy="120" r="26" fill="#f7c948"/>
+              <rect x="470" y="250" width="140" height="24" rx="8" fill="#1b1f26"/>
+              <path d="M492 250c0-26 22-44 48-44s48 18 48 44z" fill="#fff"/>
+              <path d="M520 198c-8-16 4-26 12-34" stroke="#e4572e" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <path d="M552 198c-8-16 4-26 12-34" stroke="#e4572e" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <rect x="610" y="150" width="110" height="120" rx="8" fill="#e5d6bd" stroke="#1b1f26" stroke-width="6"/>
+              <path d="M628 176h74M628 200h74M628 224h48" stroke="#8b7a5f" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <span class="tz-play">打开高清正片 · 04:12</span>
+          </figure>
+          <div class="tz-feature-body">
+            <div class="tz-tagrow">
+              <span class="tz-tag tz-tag-hot">今日赛题</span>
+              <span class="tz-tag">日常记录</span>
+              <span class="tz-tag">治愈影像</span>
+            </div>
+            <h3>清晨六点的厨房，我把一天过成了一段长镜头</h3>
+            <p>来自创作者「栗子不加糖」的参赛作品。全片只用一个厨房窗台、一只白瓷杯与三段自然光过渡，把「城市清晨第一帧」的命题拍成了可以呼吸的日常。评审团评价："画面干净，情绪克制，声音设计是加分项。"</p>
+            <div class="tz-meta">
+              <span>创作者 <b>栗子不加糖</b></span>
+              <span>播放 <b>128,430</b></span>
+              <span>点赞 <b>9,864</b></span>
+              <span>收藏 <b>3,127</b></span>
+            </div>
+            <div class="tz-actions">
+              <button class="tz-act" type="button" data-tz-like="128430"><span>点赞</span> <b>9,864</b></button>
+              <button class="tz-act" type="button" data-tz-fav>收藏</button>
+              <button class="tz-act" type="button" data-tz-copy>复制链接</button>
+              <button class="tz-act" type="button" data-tz-modal="submit">投同题作品</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="tz-feature-side">
+          <article class="tz-mini" data-tz-card>
+            <svg viewBox="0 0 160 120" role="img" aria-label="焦点推荐封面：雨天公交站台的倒影与伞面" style="width:78px;height:60px;background:#5b7d8c;">
+              <rect width="160" height="120" fill="#5b7d8c"/>
+              <circle cx="120" cy="30" r="18" fill="#cfd9dd"/>
+              <path d="M0 78h160v42H0z" fill="#3f5a66"/>
+              <path d="M24 78V44a22 22 0 0 1 44 0v34z" fill="#e4572e"/>
+              <path d="M46 44v34" stroke="#f3f1ec" stroke-width="3"/>
+              <path d="M96 96l12-24 12 24z" fill="#f7c948"/>
+            </svg>
+            <div>
+              <h4>雨天站台的十分钟</h4>
+              <span>城市探索 · 创作者 阿岸</span>
+            </div>
+            <span>2.4 万播放</span>
+          </article>
+          <article class="tz-mini" data-tz-card>
+            <svg viewBox="0 0 160 120" role="img" aria-label="焦点推荐封面：工作台上一排手工皮革工具与半成品" style="width:78px;height:60px;background:#d9c2a3;">
+              <rect width="160" height="120" fill="#d9c2a3"/>
+              <rect x="0" y="86" width="160" height="34" fill="#a8835c"/>
+              <rect x="18" y="52" width="16" height="38" rx="5" fill="#1b1f26"/>
+              <rect x="44" y="44" width="16" height="46" rx="5" fill="#3f4a57"/>
+              <rect x="70" y="58" width="70" height="26" rx="6" fill="#8b5e3c"/>
+              <path d="M86 58v26M104 58v26M122 58v26" stroke="#e6d3b8" stroke-width="2.5"/>
+            </svg>
+            <div>
+              <h4>一把皮具凿子的 90 分钟</h4>
+              <span>手作DIY · 创作者 半山工坊</span>
+            </div>
+            <span>1.8 万播放</span>
+          </article>
+          <article class="tz-mini" data-tz-card>
+            <svg viewBox="0 0 160 120" role="img" aria-label="焦点推荐封面：清晨操场上跑步者的长影子" style="width:78px;height:60px;background:#e8dcc6;">
+              <rect width="160" height="120" fill="#e8dcc6"/>
+              <circle cx="130" cy="26" r="16" fill="#f7c948"/>
+              <path d="M0 92h160v28H0z" fill="#b8a488"/>
+              <path d="M56 92l6-34 12 4-4 30z" fill="#1b1f26"/>
+              <circle cx="64" cy="46" r="9" fill="#1b1f26"/>
+              <path d="M64 92l30 18M70 92l-16 20" stroke="#1b1f26" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <h4>配速 6′30″ 的第四十天</h4>
+              <span>健康运动 · 创作者 跑者小鹿</span>
+            </div>
+            <span>3.1 万播放</span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- M3 热门视频流 -->
+  <section class="tz-sec tz-sec-alt" id="tz-videos">
+    <div class="tz-wrap">
+      <div class="tz-sec-head">
+        <div>
+          <h2>本周热门视频<span>TRENDING</span></h2>
+          <p>由播放完成度、互动密度与编辑推荐加权生成，兔崽baby 精品内容优先展示完整叙事与原创表达，拒绝搬运与重复剪辑。</p>
+        </div>
+        <a class="tz-sec-link" href="#tz-faq">投稿规则</a>
+      </div>
+
+      <div class="tz-vlist">
+        <article class="tz-vitem" data-tz-card>
+          <div>
+            <div class="tz-thumb">
+              <svg viewBox="0 0 720 315" role="img" aria-label="热门视频封面：旧城区巷口晾衣绳与斜射进来的午后阳光" style="width:100%;aspect-ratio:16/7;display:block;background:#c9d4d8;">
+                <rect width="720" height="315" fill="#c9d4d8"/>
+                <rect x="0" y="238" width="720" height="77" fill="#8f9ea3"/>
+                <path d="M60 238V70h180v168" fill="#e6eced" opacity=".7"/>
+                <path d="M300 238V110h150v128" fill="#f0e4cc" opacity=".75"/>
+                <path d="M60 96h400" stroke="#5e6d72" stroke-width="4"/>
+                <path d="M120 96v54M200 96v44M280 96v58M360 96v40" stroke="#e4572e" stroke-width="6" stroke-linecap="round"/>
+                <path d="M470 238l60-140 60 140z" fill="#1b1f26" opacity=".8"/>
+              </svg>
+            </div>
+            <h4>在旧城区走了一万步，只为了三条晾衣绳</h4>
+            <p>把城市探索做成一场慢速的视觉散步：巷口的光、晾衣绳的颜色、坐在门口的老人，构成了一个街区的呼吸节奏。片尾给出一份可复用的「扫街取景清单」。</p>
+            <div class="tz-tagrow">
+              <span class="tz-tag">城市探索</span>
+              <span class="tz-tag">在地文化</span>
+              <span class="tz-tag tz-tag-hot">编辑推荐</span>
+            </div>
+            <div class="tz-actions">
+              <button class="tz-act" type="button" data-tz-like="86420"><span>点赞</span> <b>7,204</b></button>
+              <button class="tz-act" type="button" data-tz-fav>收藏</button>
+              <button class="tz-act" type="button" data-tz-copy>复制链接</button>
+            </div>
+          </div>
+          <div class="tz-vitem-side">
+            <div class="tz-vdata">创作者 <b>阿岸</b><br>播放 <b>86,420</b><br>收藏 4,118</div>
+            <button class="tz-act" type="button" data-tz-author="阿岸｜城市探索创作者，擅长巷弄取景与自然声收录">作者主页</button>
+          </div>
+        </article>
+
+        <article class="tz-vitem" data-tz-card>
+          <div>
+            <h4>从零做一只手工皮夹：27 个步骤与 3 次返工</h4>
+            <p>不剪掉失败镜头的教程。创作者完整保留了裁切偏差、缝线歪掉与重新裁料的过程，并在关键节点给出材料清单与工具价格区间，适合真正想动手的人。</p>
+            <div class="tz-tagrow">
+              <span class="tz-tag">手作DIY</span>
+              <span class="tz-tag">教程干货</span>
+            </div>
+            <div class="tz-actions">
+              <button class="tz-act" type="button" data-tz-like="51230"><span>点赞</span> <b>4,986</b></button>
+              <button class="tz-act" type="button" data-tz-fav>收藏</button>
+              <button class="tz-act" type="button" data-tz-copy>复制链接</button>
+            </div>
+          </div>
+          <div class="tz-vitem-side">
+            <div class="tz-vdata">创作者 <b>半山工坊</b><br>播放 <b>51,230</b><br>收藏 6,002</div>
+            <button class="tz-act" type="button" data-tz-author="半山工坊｜手作DIY创作者，专注皮革与木作长流程记录">作者主页</button>
+          </div>
+        </article>
+
+        <article class="tz-vitem" data-tz-card>
+          <div>
+            <h4>连续 40 天早起跑步，我用镜头记录配速与心情</h4>
+            <p>不是打卡合集，而是一份关于「坚持」的真实复盘：前 12 天的兴奋、第 20 天的厌跑、第 33 天的配速突破，全部用同期声与心率数据呈现。</p>
+            <div class="tz-tagrow">
+              <span class="tz-tag">健康运动</span>
+              <span class="tz-tag">日常记录</span>
+            </div>
+            <div class="tz-actions">
+              <button class="tz-act" type="button" data-tz-like="74310"><span>点赞</span> <b>6,478</b></button>
+              <button class="tz-act" type="button" data-tz-fav>收藏</button>
+              <button class="tz-act" type="button" data-tz-copy>复制链接</button>
+            </div>
+          </div>
+          <div class="tz-vitem-side">
+            <div class="tz-vdata">创作者 <b>跑者小鹿</b><br>播放 <b>74,310</b><br>收藏 3,290</div>
+            <button class="tz-act" type="button" data-tz-author="跑者小鹿｜健康运动创作者，跑步数据与情绪记录双线并行">作者主页</button>
+          </div>
+        </article>
+
+        <article class="tz-vitem" data-tz-card>
+          <div>
+            <h4>给爸妈拍一支不尴尬的家庭影像：构图与提问脚本</h4>
+            <p>很多人拍家人时只会说「看镜头笑一下」。这支视频提供了 6 个自然引导问题、3 种不打扰的机位，以及后期调色模板，帮助你把陪伴拍成值得反复观看的影像。</p>
+            <div class="tz-tagrow">
+              <span class="tz-tag">人物访谈</span>
+              <span class="tz-tag">实用技巧</span>
+              <span class="tz-tag">情感故事</span>
+            </div>
+            <div class="tz-actions">
+              <button class="tz-act" type="button" data-tz-like="63180"><span>点赞</span> <b>5,913</b></button>
+              <button class="tz-act" type="button" data-tz-fav>收藏</button>
+              <button class="tz-act" type="button" data-tz-copy>复制链接</button>
+            </div>
+          </div>
+          <div class="tz-vitem-side">
+            <div class="tz-vdata">创作者 <b>镜头里的老周</b><br>播放 <b>63,180</b><br>收藏 5,447</div>
+            <button class="tz-act" type="button" data-tz-author="镜头里的老周｜人物访谈创作者，擅长家庭影像与低成本布光">作者主页</button>
+          </div>
+        </article>
+
+        <article class="tz-vitem" data-tz-card>
+          <div>
+            <h4>深夜厨房：一碗汤面的 8 分钟与 3 种声音</h4>
+            <p>美食视频也可以很安静。创作者只保留水沸、刀落、碗碰的三类声音，把烹饪过程剪成一条流动的声景，并附上完整的收音设备与后期处理思路。</p>
+            <div class="tz-tagrow">
+              <span class="tz-tag">美食烹饪</span>
+              <span class="tz-tag">创作幕后</span>
+            </div>
+            <div class="tz-actions">
+              <button class="tz-act" type="button" data-tz-like="48920"><span>点赞</span> <b>4,206</b></button>
+              <button class="tz-act" type="button" data-tz-fav>收藏</button>
+              <button class="tz-act" type="button" data-tz-copy>复制链接</button>
+            </div>
+          </div>
+          <div class="tz-vitem-side">
+            <div class="tz-vdata">创作者 <b>栗子不加糖</b><br>播放 <b>48,920</b><br>收藏 2,884</div>
+            <button class="tz-act" type="button" data-tz-author="栗子不加糖｜美食与治愈影像创作者，专注自然光与同期声">作者主页</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M4 专题 -->
+  <section class="tz-sec" id="tz-topics">
+    <div class="tz-wrap">
+      <div class="tz-sec-head">
+        <div>
+          <h2>专题企划<span>SPECIAL</span></h2>
+          <p>每日大赛之外的长期企划。每个专题由编辑组与创作者共同策划，围绕关键词持续更新，形成可追溯、可学习的内容资产。</p>
+        </div>
+      </div>
+      <div class="tz-topics">
+        <article class="tz-topic">
+          <div class="tz-topic-head">
+            <h3>厨房里的三百秒</h3>
+            <span class="tz-status">更新中</span>
+          </div>
+          <p>限定在 300 秒内完成一道家常菜，并同步讲清一个关键动作。第一季共 18 期，累计播放超过 420 万。</p>
+          <ol>
+            <li>第 19 期：葱花下锅前的那 3 秒</li>
+            <li>第 20 期：如何把汤面煮出层次</li>
+            <li>第 21 期：一个人的晚餐也要摆盘</li>
+          </ol>
+        </article>
+        <article class="tz-topic">
+          <div class="tz-topic-head">
+            <h3>一条街的一百个人</h3>
+            <span class="tz-status">更新中</span>
+          </div>
+          <p>城市探索 × 人物访谈的交叉企划，每位创作者负责一条街，记录 10 位普通人的日常片段，最终汇成一部城市切片。</p>
+          <ol>
+            <li>第 8 站：早点摊老板的二十年</li>
+            <li>第 9 站：修表匠与他的放大镜</li>
+            <li>第 10 站：夜班公交的最后一排</li>
+          </ol>
+        </article>
+        <article class="tz-topic">
+          <div class="tz-topic-head">
+            <h3>新手第一支片</h3>
+            <span class="tz-status tz-status-end">已完结</span>
+          </div>
+          <p>面向零基础创作者的入门企划，从选题、写脚本、拍到剪，全部由社区公认的耐心型创作者主讲，累计帮助 3,600 余人完成首支投稿。</p>
+          <ol>
+            <li>第 1 课：用手机拍出可用的画面</li>
+            <li>第 2 课：三句话讲清一个故事</li>
+            <li>第 3 课：剪辑的第一原则是删掉</li>
+          </ol>
+        </article>
+        <article class="tz-topic">
+          <div class="tz-topic-head">
+            <h3>把非遗拍给年轻人</h3>
+            <span class="tz-status">更新中</span>
+          </div>
+          <p>由品牌内容组发起的社会责任企划，联合 12 位手作与文化类创作者，用短影像记录即将失传的工序与手艺人的日常。</p>
+          <ol>
+            <li>第 4 集：一根竹子的七十二道工序</li>
+            <li>第 5 集：染缸边的第四个季节</li>
+            <li>第 6 集：老木匠的最后一张八仙桌</li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M5 作者矩阵 -->
+  <section class="tz-sec tz-sec-alt" id="tz-authors">
+    <div class="tz-wrap">
+      <div class="tz-sec-head">
+        <div>
+          <h2>创作者矩阵<span>CREATORS</span></h2>
+          <p>兔崽baby 的社区由真实创作者支撑。以下为长期参与每日大赛、并持续输出原创内容的认证作者，他们的作品构成了平台的内容品质基线。</p>
+        </div>
+        <a class="tz-sec-link" href="#tz-about">成为创作者</a>
+      </div>
+      <div class="tz-authors">
+        <article class="tz-author" data-tz-card>
+          <div class="tz-author-top">
+            <span class="tz-ava" style="background:#e4572e;">栗</span>
+            <h3>栗子不加糖<small>美食烹饪 · 治愈影像</small></h3>
+          </div>
+          <p>习惯在清晨拍摄，只用自然光与同期声。作品节奏偏慢，但每个镜头都留足了呼吸。她认为好的美食视频不是让人饿，而是让人想坐下来好好吃一顿饭。</p>
+          <div class="tz-author-data">
+            <span><b>86</b>作品</span>
+            <span><b>12.4万</b>粉丝</span>
+          </div>
+          <button class="tz-act" type="button" data-tz-author="栗子不加糖｜美食烹饪创作者，代表企划《厨房里的三百秒》">查看作者</button>
+        </article>
+        <article class="tz-author" data-tz-card>
+          <div class="tz-author-top">
+            <span class="tz-ava" style="background:#2f6f8f;">岸</span>
+            <h3>阿岸<small>城市探索 · 在地文化</small></h3>
+          </div>
+          <p>前纪录片摄影助理，现专注城市巷弄与普通人的日常。他有一套自己的扫街取景方法：先听声音，再找光，最后等一个人走进画面。多次获得每日大赛周冠军。</p>
+          <div class="tz-author-data">
+            <span><b>132</b>作品</span>
+            <span><b>18.7万</b>粉丝</span>
+          </div>
+          <button class="tz-act" type="button" data-tz-author="阿岸｜城市探索创作者，擅长巷弄取景与自然声收录">查看作者</button>
+        </article>
+        <article class="tz-author" data-tz-card>
+          <div class="tz-author-top">
+            <span class="tz-ava" style="background:#7a5aa8;">半</span>
+            <h3>半山工坊<small>手作DIY · 教程干货</small></h3>
+          </div>
+          <p>两个人、一间小工坊，做皮革也做木作。视频以长流程记录为主，从不隐藏失败与返工。他们相信手作的魅力恰恰在于那些不完美的痕迹，教程因此更可信。</p>
+          <div class="tz-author-data">
+            <span><b>64</b>作品</span>
+            <span><b>9.2万</b>粉丝</span>
+          </div>
+          <button class="tz-act" type="button" data-tz-author="半山工坊｜手作DIY创作者，专注皮革与木作长流程记录">查看作者</button>
+        </article>
+        <article class="tz-author" data-tz-card>
+          <div class="tz-author-top">
+            <span class="tz-ava" style="background:#2f8f6f;">鹿</span>
+            <h3>跑者小鹿<small>健康运动 · 日常记录</small></h3>
+          </div>
+          <p>跑步第六年，擅长把训练数据与情绪变化放在同一条叙事线上。她拒绝贩卖焦虑式的健身内容，更愿意分享厌跑期、伤病恢复与重新出发的真实过程。</p>
+          <div class="tz-author-data">
+            <span><b>97</b>作品</span>
+            <span><b>11.6万</b>粉丝</span>
+          </div>
+          <button class="tz-act" type="button" data-tz-author="跑者小鹿｜健康运动创作者，跑步数据与情绪记录双线并行">查看作者</button>
+        </article>
+        <article class="tz-author" data-tz-card>
+          <div class="tz-author-top">
+            <span class="tz-ava" style="background:#a8862f;">周</span>
+            <h3>镜头里的老周<small>人物访谈 · 实用技巧</small></h3>
+          </div>
+          <p>拍过十年婚礼与家庭影像，最擅长在镜头前让人放松。他把访谈技巧拆成可执行的问题清单，帮助上千位新手完成了自己的第一支人物短片。</p>
+          <div class="tz-author-data">
+            <span><b>110</b>作品</span>
+            <span><b>15.3万</b>粉丝</span>
+          </div>
+          <button class="tz-act" type="button" data-tz-author="镜头里的老周｜人物访谈创作者，擅长家庭影像与低成本布光">查看作者</button>
+        </article>
+        <article class="tz-author" data-tz-card>
+          <div class="tz-author-top">
+            <span class="tz-ava" style="background:#b04f7a;">林</span>
+            <h3>林间放映室<small>艺术美学 · 深度测评</small></h3>
+          </div>
+          <p>电影学背景，用测评的方式讲镜头语言。她的视频常以一个具体画面为入口，拆解构图、色彩与剪辑节奏，让普通观众也能看懂「为什么这一幕好看」。</p>
+          <div class="tz-author-data">
+            <span><b>58</b>作品</span>
+            <span><b>8.9万</b>粉丝</span>
+          </div>
+          <button class="tz-act" type="button" data-tz-author="林间放映室｜艺术美学创作者，用测评方式拆解镜头语言">查看作者</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M8 评价 + 榜单 -->
+  <section class="tz-sec" id="tz-voices">
+    <div class="tz-wrap">
+      <div class="tz-sec-head">
+        <div>
+          <h2>社区口碑<span>VOICES</span></h2>
+          <p>每日大赛的评论区常被称作「比视频还好看」的地方。真实、具体、不吹捧，是兔崽baby 社区最珍视的气质。</p>
+        </div>
+      </div>
+      <div class="tz-comments">
+        <div class="tz-clist">
+          <article class="tz-comment">
+            <div class="tz-comment-top"><span class="tz-cava" style="background:#e4572e;">青</span><strong>青柠气泡水</strong><em>第 47 期参评者</em></div>
+            <p>第一次认真投稿就被编辑推荐了，收到反馈意见写了整整三段，比我自己复盘还细。这种被认真对待的感觉，是我留在这个平台的原因。</p>
+          </article>
+          <article class="tz-comment">
+            <div class="tz-comment-top"><span class="tz-cava" style="background:#2f6f8f;">老</span><strong>老王不加班</strong><em>连续参赛 112 天</em></div>
+            <p>每天一个命题其实很考验人，但正因为有限制，反而治好了我的「不知道拍什么」。现在我的素材库已经能剪出三支长片了。</p>
+          </article>
+          <article class="tz-comment">
+            <div class="tz-comment-top"><span class="tz-cava" style="background:#7a5aa8;">纸</span><strong>纸飞机与小满</strong><em>普通观众</em></div>
+            <p>不追热点，也不推那种吵闹的东西。睡前刷两三条，画面干净、声音舒服，看完真的会安静下来。希望一直保持这个调性。</p>
+          </article>
+          <article class="tz-comment">
+            <div class="tz-comment-top"><span class="tz-cava" style="background:#2f8f6f;">北</span><strong>北窗台</strong><em>新手创作者</em></div>
+            <p>《新手第一支片》那个专题救了我。之前一直觉得设备不够好不敢拍，看完才知道先用手机把故事讲清楚更重要。上个月终于交出了第一支。</p>
+          </article>
+          <article class="tz-comment">
+            <div class="tz-comment-top"><span class="tz-cava" style="background:#a8862f;">慢</span><strong>慢慢剪辑的人</strong><em>剪辑爱好者</em></div>
+            <p>提个小建议：希望搜索能按「时长」和「命题期数」筛选，现在翻历史赛题要滑很久。整体体验是好的，就是这块能再细一点就更好了。</p>
+          </article>
+          <article class="tz-comment">
+            <div class="tz-comment-top"><span class="tz-cava" style="background:#b04f7a;">镜</span><strong>镜中散步</strong><em>艺术类观众</em></div>
+            <p>很喜欢林间放映室的拆解，看完再回去看原片，确实能注意到以前忽略的构图。平台愿意给这种「不吵」的内容位置，挺难得的。</p>
+          </article>
+        </div>
+        <aside class="tz-rate" aria-label="社区评分摘要">
+          <b>4.8</b>
+          <span>综合口碑评分 · 共 23,416 人参与</span>
+          <ul>
+            <li><span>内容原创度</span><i>4.9</i></li>
+            <li><span>画面与声音品质</span><i>4.8</i></li>
+            <li><span>社区互动氛围</span><i>4.7</i></li>
+            <li><span>创作者成长支持</span><i>4.9</i></li>
+            <li><span>投稿与审核效率</span><i>4.6</i></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- M9 创作灵感 + M14 榜单 -->
+  <section class="tz-sec tz-sec-alt">
+    <div class="tz-wrap">
+      <div class="tz-sec-head">
+        <div>
+          <h2>创作灵感与本周榜单<span>INSPIRATION</span></h2>
+          <p>给今天还不知道拍什么的你一点具体方向，也给正在被看见的创作者一个位置。榜单每周一 10:00 更新。</p>
+        </div>
+      </div>
+      <div class="tz-insights">
+        <article class="tz-insight">
+          <h3>三个可执行的赛题角度</h3>
+          <p>把「城市清晨第一帧」拆成：① 一盏还在亮的路灯；② 早点摊第一锅油条；③ 空荡的公交站台。任选一个拍满 40 秒，不要加旁白。</p>
+        </article>
+        <article class="tz-insight">
+          <h3>剪辑思路：先删再剪</h3>
+          <p>把同一场景的所有素材看两遍，第一遍只删废片，第二遍才按情绪排序。你会发现节奏感往往来自删除，而不是添加特效。</p>
+        </article>
+        <article class="tz-insight">
+          <h3>标题建议公式</h3>
+          <p>具体时间 + 具体动作 + 具体感受。例如「六点十分，我在厨房把一天过成了一段长镜头」，比「治愈系清晨」更容易被点开。</p>
+        </article>
+      </div>
+
+      <div class="tz-topics" style="margin-top:22px;">
+        <article class="tz-topic">
+          <div class="tz-topic-head"><h3>本周热度榜</h3><span class="tz-status">TOP 3</span></div>
+          <ol>
+            <li>《清晨六点的厨房，我把一天过成了一段长镜头》· 栗子不加糖 · 12.8 万播放</li>
+            <li>《在旧城区走了一万步，只为了三条晾衣绳》· 阿岸 · 8.6 万播放</li>
+            <li>《连续 40 天早起跑步，我用镜头记录配速与心情》· 跑者小鹿 · 7.4 万播放</li>
+          </ol>
+        </article>
+        <article class="tz-topic">
+          <div class="tz-topic-head"><h3>新人榜</h3><span class="tz-status">首次上榜</span></div>
+          <ol>
+            <li>《第一次拍我爸，他紧张得一直擦桌子》· 北窗台 · 2.1 万播放</li>
+            <li>《出租屋阳台改造，预算 480 元》· 小满不将就 · 1.7 万播放</li>
+            <li>《我用三天记录一只流浪猫的作息》· 猫毛收集者 · 1.5 万播放</li>
+          </ol>
+        </article>
+        <article class="tz-topic">
+          <div class="tz-topic-head"><h3>口碑榜</h3><span class="tz-status">评分 4.9</span></div>
+          <ol>
+            <li>《给爸妈拍一支不尴尬的家庭影像》· 镜头里的老周 · 收藏率 8.6%</li>
+            <li>《从零做一只手工皮夹：27 个步骤》· 半山工坊 · 收藏率 11.7%</li>
+            <li>《新手第一支片：用手机拍出可用的画面》· 林间放映室 · 收藏率 9.9%</li>
+          </ol>
+        </article>
+        <article class="tz-topic">
+          <div class="tz-topic-head"><h3>企业动态</h3><span class="tz-status">官方发布</span></div>
+          <ul class="tz-news" style="display:grid;gap:8px;">
+            <li style="display:block;border:0;background:transparent;padding:0;font-size:13.6px;color:#6c7280;">11 月 20 日 · 每日大赛第 48 期命题正式发布，同步开放投稿通道。</li>
+            <li style="display:block;border:0;background:transparent;padding:0;font-size:13.6px;color:#6c7280;">11 月 18 日 · 创作者主页上线竖屏预览与多机位时间线功能。</li>
+            <li style="display:block;border:0;background:transparent;padding:0;font-size:13.6px;color:#6c7280;">11 月 15 日 · 平台与 4 家内容机构达成原创保护合作。</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M15 深度解析 -->
+  <section class="tz-sec" id="tz-about">
+    <div class="tz-wrap">
+      <div class="tz-sec-head">
+        <div>
+          <h2>品牌故事与关键词解析<span>ABOUT</span></h2>
+          <p>兔崽baby 如何从一个每日命题的小实验，成长为持续运营的视频品牌社区。以下内容为企业官方发布的品牌说明与关键词深度解析。</p>
+        </div>
+      </div>
+      <div class="tz-deep">
+        <h3>从一间出租屋的每日命题开始</h3>
+        <p>兔崽baby 的起点并不宏大。最初的「每日大赛」只是几位影像爱好者在出租屋里约定的一个小规矩：每天定一个命题，谁都不能缺席。命题从「你窗外的一平方米」到「一顿没有摆盘的晚饭」，规则简单到近乎苛刻——当天拍、当天交、不修音不加旁白。正是这种限制，迫使参与者回到影像最本质的部分：观察、等待与选择。半年之后，这个约定变成了一个开放的投稿入口，兔崽baby 作为视频品牌的雏形也随之确立。</p>
+        <p>今天的兔崽baby 官方网站，承担的已不只是一个投稿入口的功能。它是每日大赛的官方发布台，是精品内容的长期档案库，是创作者的成长档案，也是企业与社区之间的公开沟通窗口。我们把「持续运营」当作一种承诺：命题会不断更新，规则会随社区反馈调整，但真实、原创与尊重创作者的原则不会变。</p>
+
+        <div class="tz-pull">我们始终相信，一支好视频不一定要昂贵的设备，但一定需要一个被认真对待的命题，和一位愿意等待光线的创作者。</div>
+
+        <h3>关键词一：每日大赛的机制设计与公平性</h3>
+        <p>「每日大赛」四个字里，最容易被误解的是「大赛」。它并不是一场淘汰制的竞赛，而是一套以日为单位的创作节律。每天 09:00 官方发布命题，创作者在 24 小时内完成拍摄与投稿，次日 10:00 公布编辑推荐与社区投票结果。评审维度固定为四项：命题契合度、叙事完成度、画面与声音品质、原创性，各占 25%。所有作品在同一条时间线上展示，不因粉丝量或历史成绩给予额外曝光权重，这是兔崽baby 维持公平性的核心设计。</p>
+        <p>为了保证「日更」不变成粗制滥造的借口，我们在投稿端设置了三道软性关卡：一是投稿前的原创声明与素材来源填写；二是编辑组的初筛，主要排除搬运、拼接与重复投稿；三是社区举报通道，任何用户都可以对可疑作品发起复核。近一年，平台共处理原创争议 214 起，其中 37 件作品被下架并公开说明原因。这些数字并不好看，但我们选择公开，因为一个视频品牌的公信力，恰恰建立在这些不那么漂亮的记录之上。</p>
+
+        <h3>关键词二：tuzaibaby 的内容生态与创作者支持</h3>
+        <p>tuzaibaby 是兔崽baby 面向国际创作者与合作伙伴使用的品牌标识。围绕这个标识，我们逐步搭建了一套三层内容生态：最底层是每日大赛产生的海量日常投稿，它们构成社区的活水；中间层是由编辑组与资深创作者共同维护的专题企划，负责把零散的好作品组织成可学习的结构；最上层是精品内容与品牌合作项目，承担对外展示与商业可持续的责任。三层之间并非等级关系，而是互相供养——专题会从每日投稿中选材，精品项目会反哺创作者激励池。</p>
+        <p>在创作者支持方面，平台目前提供四项常态化机制：新人引导计划，为新注册创作者配备一位志愿者导师，完成首支投稿；收益分成计划，将精品内容的广告与授权收入按约定比例分给创作者；设备借用计划，与两家器材机构合作，为优质创作者提供短期设备支持；线下共学计划，每季度在合作空间举办一次小型放映与复盘会。我们不承诺每个人都能成为头部，但希望每一位认真创作的人，都能在这套生态里获得可见的成长反馈。</p>
+
+        <h3>关键词三：品牌定位、品质底线与社会责任</h3>
+        <p>作为一家垂直领域的视频内容品牌，兔崽baby 的定位始终清晰：做普通人日常影像的长期记录者与组织者。我们不做猎奇，不追逐短期流量，不鼓励以伤害自己或他人为代价的挑战。平台的内容品质底线写在《社区创作公约》里，共十二条，涵盖原创、肖像授权、未成年人保护、动物拍摄规范与商业信息披露等具体场景。公约每年公开修订一次，修订意见来自社区投票与编辑组复盘。</p>
+        <p>社会责任方面，兔崽baby 将「把非遗拍给年轻人」列为长期公益企划，联合手作与文化类创作者记录濒临失传的工序。该企划不设商业植入，所有收益进入专项基金，用于手艺人的拍摄补贴与素材归档。我们相信，一个希望被称作「用户首选」与「值得信赖」的品牌，不能只在口头上强调品质，而要在具体的项目、具体的预算与具体的人身上，证明自己愿意长期投入。</p>
+
+        <h3>关键词四：社区文化、陪伴感与未来计划</h3>
+        <p>兔崽baby 的评论区有一种少见的气质：具体、克制、愿意指出问题。有人会在作品下认真讨论某一个镜头的焦距选择，也有人会坦率地说「这一条不如你上一条」。我们刻意没有引入过度娱乐化的互动机制，没有夸张的打赏榜，也没有用算法无限放大情绪对立。原因很简单——如果社区氛围变成互相攻击，那么再好的命题也留不住创作者。</p>
+        <p>面向未来一年，平台计划完成三件事：其一，上线创作者成长档案，把参赛记录、评审反馈与技能标签整合成一页可分享的个人主页；其二，把每日大赛的历史命题整理成开放的选题库，供教育机构与创作者免费使用；其三，扩大线下共学计划的覆盖城市，从目前的 6 座扩展到 12 座。这些计划都不激进，但它们与兔崽baby 一贯的节奏一致：缓慢、具体、可被验证。我们希望这支视频品牌能继续陪伴创作者走下去，也希望每一位打开官网的访客，都能在这里找到一支让自己安静下来的短片。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- M11 合作 + M12 FAQ + M13 投稿 -->
+  <section class="tz-sec tz-sec-alt" id="tz-faq">
+    <div class="tz-wrap">
+      <div class="tz-sec-head">
+        <div>
+          <h2>合作与帮助<span>SUPPORT</span></h2>
+          <p>品牌合作、投稿咨询与常见问题。我们尽量把规则写清楚，减少沟通成本，也让每一次合作都经得起公开检验。</p>
+        </div>
+        <button class="tz-btn tz-btn-gold" type="button" data-tz-modal="submit">提交投稿 / 合作意向</button>
+      </div>
+
+      <div class="tz-partners" style="margin-bottom:26px;">
+        <div class="tz-partner">光屿器材<small>设备支持伙伴</small></div>
+        <div class="tz-partner">慢帧空间<small>线下共学合作</small></div>
+        <div class="tz-partner">青禾文创基金<small>非遗企划联合发起</small></div>
+        <div class="tz-partner">南岸放映<small>季度展映合作</small></div>
+      </div>
+
+      <div class="tz-faq">
+        <details open>
+          <summary>每日大赛的投稿有设备和时长要求吗？</summary>
+          <p>没有设备门槛，手机拍摄完全接受。单条作品时长建议 30 秒至 8 分钟，超过 8 分钟需在投稿时说明叙事必要性。画面需为原创拍摄，允许使用正版音乐与授权素材，并在投稿表单中如实填写来源。</p>
+        </details>
+        <details>
+          <summary>命题公布后当天没拍完，可以顺延提交吗？</summary>
+          <p>可以。每日大赛的投稿窗口为命题发布后 24 小时内，但平台同时保留「补交通道」，允许在命题结束后的 72 小时内补交，补交作品不参与当期编辑推荐，但会计入个人成长档案与年度评选。</p>
+        </details>
+        <details>
+          <summary>作品被判定为搬运或重复投稿会怎样？</summary>
+          <p>首次违规会收到书面提醒并下架作品，不扣除账号信用分；第二次违规则暂停投稿权限 30 天；第三次违规将永久关闭投稿权限。所有处理结果均可在个人中心的「原创记录」中查询，并支持一次申诉。</p>
+        </details>
+        <details>
+          <summary>如何申请成为认证创作者？</summary>
+          <p>连续参与每日大赛满 30 天、累计投稿不少于 20 条、且无原创争议记录，即可在个人中心提交认证申请。编辑组会在 5 个工作日内完成审核，认证后可使用创作者主页、作品合集与数据看板等工具。</p>
+        </details>
+        <details>
+          <summary>品牌合作的内容会标注广告吗？</summary>
+          <p>会。所有商业合作内容必须在片头或片尾以清晰可见的方式标注「商业合作」，并在视频简介中披露合作方。未标注的商业内容一经发现，将按违反《社区创作公约》处理。这是兔崽baby 作为官方网站的底线要求。</p>
+        </details>
+        <details>
+          <summary>我可以把平台上的作品转载到其他渠道吗？</summary>
+          <p>需获得创作者本人书面授权。平台仅提供展示与传播服务，不代创作者授予转载权利。若需用于商业用途，请通过投稿表单中的「版权合作」通道联系我们，我们会协助对接创作者。</p>
+        </details>
+      </div>
+
+      <div class="tz-insights" style="margin-top:26px;">
+        <article class="tz-insight">
+          <h3>投稿入口</h3>
+          <p>点击「提交投稿 / 合作意向」填写表单，附上作品链接与 100 字以内的创作说明。编辑组承诺 48 小时内给出首次反馈。</p>
+        </article>
+        <article class="tz-insight">
+          <h3>分享与反馈</h3>
+          <p>喜欢某支作品，可以用页面内的「复制链接」按钮分享给朋友；遇到问题欢迎通过举报通道反馈，我们会逐条记录并回复。</p>
+        </article>
+        <article class="tz-insight">
+          <h3>联系时间</h3>
+          <p>工作日 10:00–19:00 为人工响应时段。节假日期间投稿审核正常进行，人工回复可能延迟至次个工作日。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="tz-footer">
+  <div class="tz-wrap">
+    <div class="tz-footer-grid">
+      <div>
+        <div class="tz-footer-brand">
+          <span class="tz-logo-mark"><span></span></span>
+          <strong>兔崽baby</strong>
+        </div>
+        <p>兔崽baby（tuzaibaby）官方网站，专注每日大赛与原创影像的内容品牌。我们以专业、正版、高清的精品内容，持续运营一个真实、温暖、有力量的创作者社区。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#tz-daily">今日赛题</a></li>
+          <li><a href="#tz-videos">精品内容</a></li>
+          <li><a href="#tz-topics">专题企划</a></li>
+          <li><a href="#tz-authors">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#tz-about">品牌故事</a></li>
+          <li><a href="#tz-voices">社区口碑</a></li>
+          <li><a href="#tz-faq">帮助中心</a></li>
+          <li><a href="#tz-faq">合作咨询</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方说明</h4>
+        <ul>
+          <li>原创声明与版权保护</li>
+          <li>《社区创作公约》</li>
+          <li>商业合作披露规则</li>
+          <li>未成年人保护指引</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tz-footer-bottom">
+      <span>© 2026 兔崽baby tuzaibaby 官方网站 · 版权所有 · 持续运营中</span>
+      <span>网络文化经营许可证 示例备案号 · 内容由社区创作者原创发布</span>
+    </div>
+  </div>
+</footer>
+
+<div class="tz-toast" id="tz-toast" role="status" aria-live="polite"></div>
+<button class="tz-top" id="tz-top" aria-label="回到顶部">↑</button>
+
+<div class="tz-modal" id="tz-modal" role="dialog" aria-modal="true" aria-labelledby="tz-modal-title">
+  <div class="tz-modal-box">
+    <button class="tz-modal-close" type="button" id="tz-modal-close" aria-label="关闭弹窗">✕</button>
+    <h3 id="tz-modal-title">提交投稿 / 合作意向</h3>
+    <p>填写基本信息，编辑组会在 48 小时内给出首次反馈。</p>
+    <div class="tz-field"><label for="tz-m-name">称呼</label><input id="tz-m-name" type="text" placeholder="你的昵称或机构名称"></div>
+    <div class="tz-field"><label for="tz-m-way">联系方式</label><input id="tz-m-way" type="text" placeholder="邮箱或常用社交账号"></div>
+    <div class="tz-field"><label for="tz-m-note">作品说明</label><textarea id="tz-m-note" rows="3" placeholder="100 字以内的创作说明或合作需求"></textarea></div>
+    <button class="tz-btn tz-btn-primary" type="button" id="tz-modal-send">确认提交</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('tz-toast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('tz-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('tz-show'); }, 2200);
+  }
+
+  /* mobile nav */
+  var burger = document.getElementById('tz-burger');
+  var nav = document.getElementById('tz-nav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('tz-nav-open');
+    burger.classList.toggle('tz-burger-x', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? '收起导航菜单' : '展开导航菜单');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 840){
+      nav.classList.remove('tz-nav-open');
+      burger.classList.remove('tz-burger-x');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* search */
+  var input = document.getElementById('tz-search-input');
+  var hint = document.getElementById('tz-search-hint');
+  var searchBtn = document.getElementById('tz-search-btn');
+  var pool = ['城市清晨第一帧','栗子不加糖','阿岸','手作DIY','每日大赛第48期','跑者小鹿','半山工坊','新手第一支片','非遗企划','镜头里的老周','林间放映室','家庭影像'];
+
+  function runSearch(){
+    var q = input.value.trim();
+    if(!q){
+      hint.innerHTML = '<p>试试搜索：<b>每日大赛</b>、<b>手作</b>、<b>阿岸</b></p>';
+      hint.classList.add('tz-open');
+      return;
+    }
+    var hits = pool.filter(function(item){ return item.indexOf(q) > -1 || q.indexOf(item) > -1; });
+    if(hits.length){
+      hint.innerHTML = hits.slice(0,5).map(function(h){ return '<p>在兔崽baby找到：<b>'+h+'</b></p>'; }).join('');
+      toast('已为你筛选出 ' + hits.length + ' 条相关结果');
+    }else{
+      hint.innerHTML = '<p>暂无完全匹配的内容，可尝试：<b>每日大赛</b>、<b>创作者</b>、<b>投稿</b></p>';
+      toast('暂未找到「'+ q +'」，换个关键词试试');
+    }
+    hint.classList.add('tz-open');
+  }
+
+  searchBtn.addEventListener('click', runSearch);
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+  });
+  input.addEventListener('input', function(){
+    if(!input.value.trim()){ hint.classList.remove('tz-open'); }
+  });
+  hint.addEventListener('click', function(e){
+    var p = e.target.closest('p');
+    if(!p) return;
+    input.value = p.textContent.replace(/^在兔崽baby找到：/,'').trim();
+    hint.classList.remove('tz-open');
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.tz-search')){ hint.classList.remove('tz-open'); }
+  });
+
+  /* like */
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-tz-like]');
+    if(!btn) return;
+    var base = parseInt(btn.getAttribute('data-tz-like'), 10) || 0;
+    var numEl = btn.querySelector('b');
+    var current = numEl ? parseInt(numEl.textContent.replace(/,/g,''), 10) : 0;
+    if(btn.classList.contains('tz-act-on')){
+      btn.classList.remove('tz-act-on');
+      if(numEl) numEl.textContent = (current - 1).toLocaleString('en-US');
+      toast('已取消点赞');
+    }else{
+      btn.classList.add('tz-act-on');
+      if(numEl) numEl.textContent = (current + 1).toLocaleString('en-US');
+      toast('感谢你的点赞支持');
+    }
+  });
+
+  /* favorite */
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-tz-fav]');
+    if(!btn) return;
+    var on = btn.classList.toggle('tz-act-on');
+    btn.textContent = on ? '已收藏 ♥' : '收藏';
+    toast(on ? '已加入你的收藏夹' : '已从收藏夹移除');
+  });
+
+  /* copy link */
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-tz-copy]');
+    if(!btn) return;
+    var text = '兔崽baby 每日大赛 · 官方精品内容';
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ toast('链接已复制，去分享给朋友吧'); })
+      .catch(function(){ toast('复制失败，请手动选择内容分享'); });
+    }else{
+      toast('当前环境不支持自动复制，请手动分享');
+    }
+  });
+
+  /* author modal as toast info */
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-tz-author]');
+    if(!btn) return;
+    var info = btn.getAttribute('data-tz-author');
+    toast(info.length > 26 ? info.slice(0,26) + '…' : info);
+  });
+
+  /* modal */
+  var modal = document.getElementById('tz-modal');
+  var modalTitle = document.getElementById('tz-modal-title');
+  var lastFocus = null;
+  function openModal(){
+    lastFocus = document.activeElement;
+    modal.classList.add('tz-open');
+    document.getElementById('tz-m-name').focus();
+  }
+  function closeModal(){
+    modal.classList.remove('tz-open');
+    if(lastFocus) lastFocus.focus();
+  }
+  document.addEventListener('click', function(e){
+    var trigger = e.target.closest('[data-tz-modal]');
+    if(trigger){ e.preventDefault(); openModal(); }
+  });
+  document.getElementById('tz-modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('tz-open')) closeModal(); });
+  document.getElementById('tz-modal-send').addEventListener('click', function(){
+    var name = document.getElementById('tz-m-name').value.trim();
+    var way = document.getElementById('tz-m-way').value.trim();
+    if(!name || !way){
+      toast('请填写称呼与联系方式');
+      return;
+    }
+    closeModal();
+    toast('提交成功，编辑组会在 48 小时内联系你');
+    document.getElementById('tz-m-name').value = '';
+    document.getElementById('tz-m-way').value = '';
+    document.getElementById('tz-m-note').value = '';
+  });
+
+  /* back to top */
+  var topBtn = document.getElementById('tz-top');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ topBtn.classList.add('tz-show'); }
+    else{ topBtn.classList.remove('tz-show'); }
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* nav active on scroll */
+  var navLinks = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var sections = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  window.addEventListener('scroll', function(){
+    var pos = window.scrollY + 160;
+    var idx = 0;
+    sections.forEach(function(sec, i){
+      if(sec && sec.offsetTop <= pos){ idx = i; }
+    });
+    navLinks.forEach(function(a, i){ a.classList.toggle('tz-nav-on', i === idx); });
+  }, {passive:true});
+})();
+</script>
+
+</body>
+  </html>
